@@ -1,0 +1,498 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    height: 100vh;
+    overflow-x: hidden;
+    background: linear-gradient(to bottom, #e0f7fa, #ffffff);
+    color: #333;
+    line-height: 1.6;
+}
+
+.background-video {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    min-width: 10%;
+    min-height: 10%;
+    width: auto;
+    height: auto;
+    z-index: -1;
+    transform: translate(-50%, -50%);
+    object-fit: cover; /* Cover the entire background */
+}
+
+header {
+    text-align: center;
+    padding: 4rem 2rem;
+    background: rgba(235, 251, 255, 0.8);
+    color: rgb(255, 255, 255);
+    position: relative;
+    overflow: hidden;
+    opacity: 30%;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+header h1 {
+    font-size: 3rem;
+    margin-bottom: 0.5rem;
+    animation: slideDown 0.5s ease forwards;
+}
+
+header p {
+    font-size: 1.2rem;
+    opacity: 0.8;
+}
+
+main {
+    padding: 2rem;
+}
+
+/* Projects Section */
+.projects {
+    display: flex;
+    flex-wrap: wrap; /* Allow wrapping */
+    justify-content: center; /* Center items */
+    padding: 20px;
+    max-width: 1200px; /* Max width for the project section */
+    margin: auto; /* Center the section */
+}
+
+.project {
+    background: rgba(255, 255, 255, 0.5);
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s, box-shadow 0.3s;
+    opacity: 0.9; /* Adjusted opacity */
+    height: auto; /* Fixed height */
+    width: auto; /* Three items per row with space */
+    margin: 10px; /* Space between items */
+}
+
+/* Optional: Ensure text within the card is still readable */
+.project h2, .project p {
+    position: relative;
+    z-index: 1;
+    color: #333;
+}
+
+.project:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+}
+
+.project p {
+    margin: 0.5rem 0;
+}
+
+.project img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.project a {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    margin-top: 1rem;
+    color: white;
+    background: rgba(0, 123, 255, 0.8);
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background 0.3s;
+}
+
+.project a:hover {
+    background: rgba(0, 123, 255, 1);
+}
+
+/* Responsive Styles */
+@media (max-width: 900px) {
+    .project {
+        width: calc(50% - 20px); /* Two items per row */
+    }
+}
+
+@media (max-width: 600px) {
+    header h1 {
+        font-size: 2.5rem;
+    }
+
+    header p {
+        font-size: 1rem;
+    }
+
+    .project {
+        width: calc(100% - 20px); /* One item per row */
+    }
+}
+
+/* Animation keyframes */
+@keyframes slideDown {
+    from {
+        transform: translateY(-50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('assets/images/space_animation.mp4') no-repeat center center fixed;
+    z-index: -1;
+    opacity: 0.8;
+}
+
+/* Add this style to ensure the video covers the background */
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow: hidden;
+}
+.background-video {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    min-width: 10%;
+    min-height:10%;
+    width: auto;
+    height: auto;
+    z-index: -1;
+    transform: translate(-50%, -50%);
+    object-fit: cover; /* Cover the entire background */
+}
+
+
+.star {
+    position: absolute;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.8);
+    animation: twinkle 1.5s infinite alternate;
+}
+
+@keyframes twinkle {
+    from {
+        opacity: 0.5;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+main {
+    padding: 2rem;
+    position: relative;
+}
+
+
+.plants {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.plant {
+    width: 60px;
+    height: auto;
+    position: relative;
+    margin: 0 10px;
+}
+
+
+@keyframes slideDown {
+    from {
+        transform: translateY(-50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Responsive Styles */
+@media (max-width: 600px) {
+    header h1 {
+        font-size: 2.5rem;
+    }
+
+    header p {
+        font-size: 1rem;
+    }
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 10px;
+}
+
+.social-icon {
+    width: 30px; /* Adjust size as needed */
+    height: 30px; /* Adjust size as needed */
+    transition: transform 0.2s; /* Animation effect */
+}
+
+.social-icon:hover {
+    transform: scale(1.1); /* Scale effect on hover */
+}
+
+.circle{
+    border-radius: 40px;
+}
+
+/* Base styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(to bottom, #e0f7fa, #ffffff);
+    color: #333;
+    line-height: 1.6;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Background and header styles */
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('assets/images/space_background.jpg') no-repeat center center fixed;
+    z-index: -1;
+    opacity: 0.8;
+}
+
+.images {
+    display: flex;
+    justify-content: center; /* Centers content horizontally */
+    align-items: center; /* Centers content vertically (if height is defined) */
+}
+
+
+
+
+/* Stars and planets animations */
+.star {
+    position: absolute;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.8);
+    animation: twinkle 1.5s infinite alternate;
+}
+
+@keyframes twinkle {
+    from { opacity: 0.5; }
+    to { opacity: 1; }
+}
+
+/* Header styles */
+/* Footer styles */
+footer {
+    text-align: center;
+    padding: 1rem 0;
+    background: #3e607f;
+    opacity: 50%;
+    border-radius: 10px;
+}
+.footer-text{
+    color: white;
+}
+
+/* Responsive Styles */
+@media (max-width: 600px) {
+    header h1 {
+        font-size: 2.5rem;
+    }
+
+    header p {
+        font-size: 1rem;
+    }
+}
+
+/* Social Links styles */
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 10px;
+}
+
+.social-icon {
+    width: 30px;
+    height: 30px;
+    transition: transform 0.2s;
+}
+
+.social-icon:hover {
+    transform: scale(1.1);
+}
+
+.circle {
+    border-radius: 40px;
+}
+
+body {
+    margin: 0;
+    height: 100vh;
+    overflow: hidden;
+    background: radial-gradient(circle at bottom, navy 0%, black 100%);
+}
+
+
+@keyframes orbit {
+    0% {
+        transform: rotate(0deg) translateX(150px) rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg) translateX(150px) rotate(-360deg);
+    }
+}
+
+/*  */
+
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    overflow-y: auto; /* Ensure vertical scrolling is enabled */
+    background-color: #f4f4f4; /* Optional: Add a background color */
+}
+
+.space-header {
+    background-color: #515151; /* Example header background */
+    color: white;
+    padding: 20px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.social-icon {
+    width: 30px; /* Example icon size */
+    margin: 0 10px;
+}
+
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    height: 100vh;
+    overflow-x: hidden;
+    background: linear-gradient(to bottom, #e0f7fa, #ffffff);
+    color: #333;
+    line-height: 1.6;
+}
+
+
+/* Main styles */
+main {
+    padding: 2rem;
+}
+
+
+/* Responsive Styles */
+@media (max-width: 600px) {
+    header h1 {
+        font-size: 2.5rem;
+    }
+
+    header p {
+        font-size: 1rem;
+    }
+}
+
+/* Animation keyframes */
+@keyframes slideDown {
+    from {
+        transform: translateY(-50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    overflow-y: auto; /* Ensure vertical scrolling is enabled */
+    background-color: #f4f4f4; /* Optional: Add a background color */
+}
+
+.space-header {
+    background-color: #282c34; /* Example header background */
+    color: white;
+    padding: 20px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.social-icon {
+    width: 30px; /* Example icon size */
+    margin: 0 10px;
+}
+
